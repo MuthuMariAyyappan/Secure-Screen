@@ -1,0 +1,116 @@
+
+### Project Title: Secure Screens: Parental Control for a Safe Digital World
+
+### Project Description:
+Secure Screen is a comprehensive Child Screen Monitoring Protection system designed to help parents monitor and manage their child's digital activities in a secure and responsible manner. The system provides real-time monitoring, content filtering, time management, and reporting features to promote healthy screen time habits and ensure online safety for children.
+
+### Key Features:
+
+1. **User Authentication:** Parents can create accounts and securely log in to the Secure Screen platform to access monitoring and management features.
+
+2. **Dashboard:** Upon logging in, parents are greeted with a dashboard displaying summarized information about their child's digital activities, including recent usage trends and alerts.
+
+3. **Real-time Monitoring:** Secure Screen continuously monitors the child's screen activity in real-time, capturing data such as websites visited, applications used, and time spent on each activity.
+
+4. **Content Filtering:** Parents can set up custom content filters to restrict access to specific websites or content categories deemed inappropriate for their child's age or preferences.
+
+5. **Time Management:** Secure Screen allows parents to set screen time limits and schedules for their child, helping to balance digital usage with other activities and responsibilities.
+
+6. **Alerts and Notifications:** The system sends real-time alerts and notifications to parents when specific activities or content violations occur, enabling timely intervention and discussion with their child.
+
+7. **Usage Reports and Analytics:** Secure Screen generates detailed reports and analytics on the child's screen time and digital habits, providing insights into usage patterns and trends over time.
+
+8. **Remote Management:** Parents can remotely access and manage monitoring settings through a web-based dashboard or mobile application, ensuring flexibility and convenience.
+
+9. **Privacy and Security:** Secure Screen prioritizes user privacy and data security, implementing robust encryption and compliance with data protection regulations to safeguard sensitive information.
+
+10. **Cross-Platform Compatibility:** The system is compatible with a wide range of devices and operating systems, including desktops, laptops, tablets, and smartphones, to accommodate different family setups.
+
+### Implementation Details:
+- **Frontend:** The frontend of Secure Screen is built using the MERN stack (MongoDB, Express.js, React.js, Node.js) to create a responsive and interactive user interface.
+  
+- **Backend:** The backend is developed using Node.js and Express.js, providing RESTful APIs for user authentication, data management, and communication with the frontend.
+
+- **Database:** MongoDB is used as the database to store user accounts, monitoring data, and configuration settings, ensuring scalability and flexibility.
+
+- **Real-time Communication:** WebSocket technology (e.g., Socket.IO) is employed for real-time communication between the client and server, enabling instant updates and notifications.
+
+- **Authentication:** User authentication is implemented using JWT (JSON Web Tokens) to secure user sessions and protect sensitive information.
+
+- **Data Visualization:** Data visualization libraries (e.g., Chart.js) are integrated to create informative and visually appealing usage reports and analytics.
+
+- **Deployment:** The Secure Screen application is deployed on a cloud platform (e.g., AWS, Heroku) to ensure availability and scalability, with continuous integration and deployment (CI/CD) pipelines for efficient development and updates.
+
+### Conclusion:
+Secure Screen provides a comprehensive solution for parents to monitor and manage their child's screen time and digital activities, promoting healthy habits and ensuring a safe online environment. By leveraging the MERN stack and implementing key features such as real-time monitoring, content filtering, and usage reports, Secure Screen empowers parents to take control of their child's digital well-being in today's connected world.
+
+
+
+
+microservices-example/
+├── api-gateway/
+│   ├── app.js
+│   └── package.json
+├── users-service/
+│   ├── app.js
+│   ├── controllers/
+│   │   └── userController.js
+│   ├── models/
+│   │   └── User.js
+│   ├── routes/
+│   │   └── users.js
+│   ├── utils/
+│   │   └── auth.js
+│   └── package.json
+├── products-service/
+│   ├── app.js
+│   ├── controllers/
+│   │   └── productController.js
+│   ├── models/
+│   │   └── Product.js
+│   ├── routes/
+│   │   └── products.js
+│   └── package.json
+├── orders-service/
+│   ├── app.js
+│   ├── controllers/
+│   │   └── orderController.js
+│   ├── models/
+│   │   └── Order.js
+│   ├── routes/
+│   │   └── orders.js
+│   └── package.json
+└── package.json
+
+
+
+Auth Service:
+
+
+1. **Users Table**:
+   - `user_id` (Primary Key)
+   - `username`
+   - `email`
+   - `password`
+   . `role`
+   - `created_at`
+   - `updated_at`
+
+2. **Child Profiles Table**:
+   - `child_id` (Primary Key)
+   - `user_id` (Foreign Key referencing the Users table)
+   - `name`
+   - `date_of_birth`
+   - `age` (auto populate)
+   - `created_at`
+   - `updated_at`
+
+3. **Devices Table**:
+   - `device_id` (Primary Key)
+   - `user_id` (Foreign Key referencing the Users table)
+   - `name` 
+   - `type` (laptop, tab, phone)
+   - `os` (Android, windows, Mac)
+   - `created_at`
+   - `updated_at`
+
